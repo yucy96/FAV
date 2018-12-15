@@ -190,7 +190,7 @@ def draw_bounding_box_on_image(image,
     text_bottom = bottom + total_display_str_height
   # Reverse list and print from bottom to top.
   for d_str in display_str_list[::-1]:
-    display_str = d_str +" "+ str(xmin) +" "+ str(xmax) +" "+ str(ymin) +" "+ str(ymax)
+    display_str = d_str +" L:"+ str(left) +" R:"+ str(right) +" T:"+ str(top) +" B:"+ str(bottom)
     text_width, text_height = font.getsize(display_str)
     margin = np.ceil(0.05 * text_height)
     draw.rectangle(
